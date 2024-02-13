@@ -1,0 +1,79 @@
+{"intents": [
+  {
+    "tag":"unsure",
+    "patterns": [],
+    "responses":0,
+    "context_set":"",
+    "flags": false
+  },
+  {
+    "tag":"nevermind",
+    "patterns": ["never mind", "cancel", "stop listening"],
+    "responses":-1,
+    "context_set":"",
+    "flags": false
+  },
+  {
+    "tag":"abilities",
+    "patterns": ["What can you do", "What can I ask you", "what can you help me with", "what are your capabilities"],
+    "responses":1,
+    "context_set":"",
+    "flags": false
+  },
+  {
+    "tag":"time",
+    "patterns": ["tell me the time", "what is the time", "I need the time"],
+    "responses":2,
+    "context_set":"",
+    "flags": false
+  },
+  {
+    "tag":"date",
+    "patterns": ["tell me the date", "what is the date", "I need the date"],
+    "responses":3,
+    "context_set":"",
+    "flags": false
+  },
+  {
+    "tag":"lights_on",
+    "patterns": ["turn on the lights", "it is too dark in here", "I want the lights on", "I want it brighter in here"],
+    "responses":4,
+    "context_set":"",
+    "flags": {"1": 4}
+  },
+  {
+    "tag":"lights_off",
+    "patterns": ["turn off the lights", "it is too bright in here", "I want the lights off", "I want it darker in here"],
+    "responses":5,
+    "context_set":"",
+    "flags": false
+  },
+  {
+    "tag":"temp",
+    "patterns": ["what's the temperature", "how hot is it outside", "how cold is it outside", "I need the temperature"],
+    "responses":6,
+    "context_set":"",
+    "flags": false
+  },
+  {
+    "tag":"joke",
+    "patterns": ["tell me a joke", "make me laugh", "I want to hear a joke"],
+    "responses":7,
+    "context_set":"",
+    "flags": false 
+  },
+  {
+    "tag":"newReminder",
+    "patterns": ["set a reminder", "create a reminder"],
+    "responses":8,
+    "context_set":"",
+    "flags": true 
+  },
+  {
+    "tag":"getReminders",
+    "patterns": ["what reminders do I have", "Do I have any reminders", "Tell me my reminders"],
+    "responses":9,
+    "context_set":"",
+    "flags": false 
+  }
+]}
