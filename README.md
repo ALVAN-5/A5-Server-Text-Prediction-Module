@@ -32,11 +32,11 @@ The query method takes in a query, compares it to the trained intents, and repli
 
 The output has the following shape:
 ```python
-{intent responses, intent flags}
+{intent tag, intent context_set, intent responses, intent flags}
 ```
 Example
 ```python
-predictor.query('Turn off the lights') -> {4, {"followup": 0}}
+predictor.query('Turn on the lights') -> {'lights_on', None, 4, {"followup": 0}}
 ```
 _based on example below_
 
@@ -50,7 +50,7 @@ The intents file is a json file with the following shape:
         "tag":<String - human-readable descriptor>,
         "patterns": [<List of Strings - various ways a user could phrase their query],
         "responses": <Int - unique id of the intent>,
-        "context_set":<String - currently unused metadata>,
+        "context_set":<Object - currently unused metadata>,
         "flags": <Object with boolean values for flags used by the consumer>
     }
     >
@@ -68,7 +68,7 @@ Example:
             "I want it brighter in here"
         ],
         "responses":4,
-        "context_set":"",
+        "context_set": None,
         "flags": {"followup": 0}
     },
     {
@@ -80,7 +80,7 @@ Example:
             "I want it darker in here"
         ],
         "responses":5,
-        "context_set":"",
+        "context_set": None,
         "flags": {"followup": 0}
     },
 ]}
