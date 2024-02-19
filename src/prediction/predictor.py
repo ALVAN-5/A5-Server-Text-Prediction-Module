@@ -164,7 +164,7 @@ class Predictor:
     def query(self, query: str):
         '''
         Method to predict which intent the provided query best matches.
-        Takes in a string
+        Takes in a string, returns most closely matched intent, without the patterns.
         '''
         words = self.words
         training = self.training
@@ -184,9 +184,10 @@ class Predictor:
                 if wrd in words and line[words.index(wrd)] == 1:
                     points += 1
 
-            if points > maxPoints:
+            line_length = len([x for x in line if x == 1])
+            if points/line_length > maxPoints:
                 lineWithMostPoints = index
-                maxPoints = points
+                maxPoints = points/line_length
 
         output_list = output
         final_output = []
@@ -197,6 +198,8 @@ class Predictor:
         for index, line in enumerate(final_output):
             if line == output[lineWithMostPoints]:
                 return (
+                    self.intents_json['intents'][index+1]['tag'],
+                    self.intents_json['intents'][index+1]['context_set'],
                     self.intents_json['intents'][index+1]['responses'],
                     self.intents_json['intents'][index+1]['flags']
                 )
