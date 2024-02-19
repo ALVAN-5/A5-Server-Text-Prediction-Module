@@ -1,3 +1,14 @@
+[project]
+name = "alvan-text-predictor"
+version = "1.0.0"
+description = "The text prediction module for ALVAN 5."
+license = {file = "LICENSE"}
+authors = [
+  {name = "Craig Sirota", email = "craigmsirota@gmail.com"},
+]
+readme = "README.md"
+requires-python = ">= 3.12"
+
 [build-system]
 requires = ["setuptools>=42.0", "wheel"]
 build-backend = "setuptools.build_meta"
