@@ -1,6 +1,6 @@
 [project]
 name = "alvan-text-predictor"
-version = "1.0.0"
+version = "1.0.0.RC"
 description = "The text prediction module for ALVAN 5."
 license = {file = "LICENSE"}
 authors = [
