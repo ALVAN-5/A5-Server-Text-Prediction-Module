@@ -1,4 +1,4 @@
--e git+https://github.com/ALVAN-5/A5-Server-Text-Prediction-Module@691dda382b45fb3f12ed138a13c233b1af3ac2ed#egg=ALVAN_Text_Predictor
+-e git+https://github.com/ALVAN-5/A5-Server-Text-Prediction-Module@master#egg=ALVAN_Text_Predictor
 click==8.1.7
 joblib==1.3.2
 nltk==3.8.1
