@@ -78,6 +78,7 @@ class Predictor:
             self.stemmer = nltk.stem.LancasterStemmer()
         except LookupError:
             nltk.download('punkt')
+            self.stemmer = nltk.stem.LancasterStemmer()
 
         try:
             with open(os.path.join(".PredictorCache", self.intents_cache_file), "r") as cached_intents_file:
