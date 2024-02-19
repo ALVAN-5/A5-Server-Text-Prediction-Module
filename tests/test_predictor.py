@@ -10,9 +10,9 @@ pickle_file = ""
 def test_intents():
     global pickle_file
     pickle_file = "test_intents.pickle"
-    predictor = pd.Predictor(os.path.join('tests', 'test_data', 'test_intents1.json'),    pickle_file=pickle_file)
+    predictor = pd.Predictor(os.path.join('tests', 'test_data', 'test_intents1.json'), pickle_file=pickle_file)
     res = predictor.query('turn the lights on')
-    assert res == (4, {'1': 4})
+    assert res == ('lights_on', '', 4, {'1': 4}) 
 
 
 def test_new_training_data():
@@ -20,10 +20,10 @@ def test_new_training_data():
     pickle_file = "test_new_training_data.pickle"
     predictor = pd.Predictor(os.path.join('tests', 'test_data', 'test_intents1.json'), pickle_file=pickle_file)
     res = predictor.query('turn the lights on')
-    assert res == (4, {'1': 4})
+    assert res == ('lights_on', '', 4, {'1': 4}) 
     predictor = pd.Predictor(os.path.join('tests', 'test_data', 'test_intents2.json'), pickle_file=pickle_file)
     res = predictor.query('turn the lights on')
-    assert res == (4, {'1': 3})
+    assert res == ('lights_on', '', 4, {'1': 3}) 
 
 
 def test_no_pickle_file_provided():
