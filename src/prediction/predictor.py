@@ -74,7 +74,10 @@ class Predictor:
         self.pickle_file = pickle_file
         self.intents_cache_file = intents_cache_file
 
-        self.stemmer = nltk.stem.LancasterStemmer()
+        try:
+            self.stemmer = nltk.stem.LancasterStemmer()
+        except LookupError:
+            nltk.download('punkt')
 
         try:
             with open(os.path.join(".PredictorCache", self.intents_cache_file), "r") as cached_intents_file:
