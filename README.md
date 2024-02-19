@@ -22,9 +22,9 @@ The constructor for the Predictor class takes in 1 required and 2 optional param
 
 | Parameter           | Type | Required | Default  | Description |
 | --------------------|-------|-----| ----------- |------------|
-| intents_filename    | `str` | [x] | `""` | Filename for the intents file, used to train the model.       |
-| pickle_file         | `str` | [ ] | `"data.pickle"` | Filename for the file that contains/will contain the serialized model-training output        |
-| intents_cache_file  | `str` | [ ] | `"intents_cache"` | Filename for the intents cache. This is used to detect if any changes have been made to the original intents file. If the contents of this file differ from the file passed into the `intents_filename`, the model will be retrained and the contents of this file and the `pickle_file` will be overwritten with the contents of the `intents_filename` file, and the serialized output of the training.        |
+| intents_filename    | `str` | &#9745; | `""` | Filename for the intents file, used to train the model.       |
+| pickle_file         | `str` | &#9744; | `"data.pickle"` | Filename for the file that contains/will contain the serialized model-training output        |
+| intents_cache_file  | `str` | &#9744; | `"intents_cache"` | Filename for the intents cache. This is used to detect if any changes have been made to the original intents file. If the contents of this file differ from the file passed into the `intents_filename`, the model will be retrained and the contents of this file and the `pickle_file` will be overwritten with the contents of the `intents_filename` file, and the serialized output of the training.        |
 
 ### query(query)
 
