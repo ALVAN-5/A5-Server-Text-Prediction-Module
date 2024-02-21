@@ -1,4 +1,4 @@
-# A5-Server-Text-Prediction-Module
+# A5-Text-Prediction-Module
 Module to predict which action a query best fits
 
 ## To Install
